@@ -25,15 +25,16 @@ add_library(async Ansynchon.h Ansynchon.cpp)
 target_link_libraries(async Balks Threads::Threads)
 
 add_executable(OTUS8_Duplicates main.cpp)
-#set_target_properties(OTUS8_Duplicates PROPERTIES
-#        COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
-#        INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
-#        )
 set_target_properties(OTUS8_Duplicates PROPERTIES
-        CXX_STANDARD 17
-        CXX_STANDARD_REQUIRED ON
-        COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
+        COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
+        INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
         )
+
+#set_target_properties(OTUS8_Duplicates PROPERTIES
+#        CXX_STANDARD 17
+#        CXX_STANDARD_REQUIRED ON
+#        COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
+#        )
 
 target_link_libraries(OTUS8_Duplicates ${Boost_LIBRARIES} Balks async)
 
