@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(OTUS8_Duplicates VERSION 0.0 ${PATCH_VERSION})
+project(OTUS8_Duplicates VERSION 0.0.${PATCH_VERSION})
 
 configure_file(version.h.in version.h)
 
