@@ -15,7 +15,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=thread -fno-omit-frame-pointe
 add_compile_options(-Wall -Wextra -pedantic -Werror)
 
 # ищем пакеты для него
-find_package(Boost unit_test_framework program_options filesystem regex REQUIRED)
+find_package(Boost REQUIRED)
 find_package(Threads REQUIRED)
 
 add_library(Balks Balk.h Balk.cpp ResponseHandler.h ResponseHandler.cpp)
